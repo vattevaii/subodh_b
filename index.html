@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        position: relative;
+      }
+      .content {
+        padding-inline: 10px;
+      }
+      .center.content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        height: 100%;
+      }
+      .full-page {
+        height: 100vh;
+        padding-block: 50px;
+      }
+      .full-page > .background-img {
+        position: absolute;
+        min-width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        z-index: -1;
+      }
+      .next-page-btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        left: 50%;
+        min-height: 50px;
+        font-size: 28px;
+        transform: translateX(-50%);
+        border: 2px solid black;
+        aspect-ratio: 1;
+        rotate: 90deg;
+      }
+      .logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(12.4vh);
+        height: 55px;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+      }
+      .logo > svg {
+        height: 100%;
+        aspect-ratio: 1;
+      }
+      .logo > .text {
+        color: black;
+        margin-left: -20px;
+        font-size: 24px;
+        font-family: "DM Sans", sans-serif;
+      }
+      .btn-group {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .btn-group > * {
+        flex: 1 1 100px;
+      }
+      .btn {
+        cursor: pointer;
+        font-family: inherit;
+      }
+      .btn-social {
+        display: flex;
+        align-items: center;
+        border: none;
+        gap: 15px;
+        padding: 10px 20px 8px 20px;
+        margin: 0;
+        background-color: #3e301f;
+        color: #f7efe2;
+      }
+      .btn-social > span {
+        display: inline-block;
+      }
+      h2,
+      h4 {
+        margin: 0;
+        line-height: 1em;
+      }
+      h2 {
+        font-size: 30px;
+        font-weight: normal;
+      }
+      h4 {
+        font-size: 20px;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container full-page">
+        <img class="background-img" src="/img/paint.jpg" />
+        <div class="content center">
+          <div class="logo">
+            <svg viewBox="0 0 20 20">
+              <path
+                d="M0 0 L20 0 L20 5 M20 15 L20 20 L0 20 L0 0"
+                fill="none"
+                stroke="black"
+              />
+            </svg>
+            <div class="text">Subodh B.</div>
+          </div>
+          <h2>Website Under Construction!</h2>
+          <h4>To view my works, please visit my Instagram and LinkedIn.</h4>
+          <div class="btn-group">
+            <button class="btn btn-social instagram">
+              <span><img src="/img/instagram.svg" /></span>Instagram
+            </button>
+            <button class="btn btn-social linkedin">
+              <span><img src="/img/linkedIn.svg" /></span>LinkedIn
+            </button>
+          </div>
+        </div>
+        <!-- <button type="button" class="next-page-btn">→</button> -->
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
