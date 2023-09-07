@@ -13,7 +13,7 @@
     body {
       background-color: #E2D8D9;
       background-image: url(/img/bg-right.png);
-      background-size: 684px 684px;
+      background-size: min(40vw, 700px) auto;
       background-repeat: no-repeat;
       background-position: 90% 50%;
       color: #423A49;
@@ -24,14 +24,6 @@
       max-width: 1240px;
       margin-inline: auto;
       padding-inline: 30px;
-    }
-
-    @media screen and (max-width: 1090px) {
-      body {
-        background-image: url(/img/paint.jpg);
-        background-size: auto 100%;
-        background-position: right 0 0;
-      }
     }
 
     .content {
@@ -143,6 +135,23 @@
       font-size: 20px;
       font-weight: normal;
     }
+
+    @media screen and (max-width: 890px) {
+      body {
+        background-size: min(100vw, 450px) auto;
+        background-position: 50% 100%;
+      }
+
+      .content {
+        height: auto;
+      }
+
+      .data {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -157,18 +166,16 @@
             <div>Hey! This is Subodh Bhandari. <span><img src="/img/emoji.png" alt="NERD" /></span></div>
           </div>
         </div>
-        <div class="content flex">
-          <div class="content">
-            <h2>Website Under Construction!</h2>
-            <h4>To view my works, please visit my Instagram and LinkedIn.</h4>
-            <div class="btn-group">
-              <button class="btn btn-social instagram">
-                <span><img src="/img/instagram.svg" /></span>Instagram
-              </button>
-              <button class="btn btn-social linkedin">
-                <span><img src="/img/linkedIn.svg" /></span>LinkedIn
-              </button>
-            </div>
+        <div class="content data">
+          <h2>Website Under Construction!</h2>
+          <h4>To view my works, please visit my Instagram and LinkedIn.</h4>
+          <div class="btn-group">
+            <button class="btn btn-social instagram">
+              <span><img src="/img/instagram.svg" /></span>Instagram
+            </button>
+            <button class="btn btn-social linkedin">
+              <span><img src="/img/linkedIn.svg" /></span>LinkedIn
+            </button>
           </div>
         </div>
       </div>
